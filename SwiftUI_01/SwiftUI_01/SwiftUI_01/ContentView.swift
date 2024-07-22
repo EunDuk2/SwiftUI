@@ -13,12 +13,18 @@ struct ContentView: View {
             VStack {
                 Text("Text 1")
                 Text("Text 2")
-                HStack {
-                    Text("Text 3")
-                    Text("Text 4")
-                }
+                MyHStackView()
             }
             Text("Text 5")
+        }
+    }
+}
+
+struct MyHStackView: View {
+    var body: some View {
+        HStack {
+            Text("Text 3")
+            Text("Text 4")
         }
     }
 }
