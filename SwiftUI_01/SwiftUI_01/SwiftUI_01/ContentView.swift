@@ -8,23 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let hStack = HStack {
+        Text("Text 3")
+        Text("Text 4")
+    }
+    
     var body: some View {
         VStack {
             VStack {
                 Text("Text 1")
                 Text("Text 2")
-                MyHStackView()
+                hStack
             }
             Text("Text 5")
-        }
-    }
-}
-
-struct MyHStackView: View {
-    var body: some View {
-        HStack {
-            Text("Text 3")
-            Text("Text 4")
         }
     }
 }
