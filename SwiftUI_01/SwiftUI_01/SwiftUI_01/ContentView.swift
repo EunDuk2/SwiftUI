@@ -10,8 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Hello, world!")
-            Text("Goodbye world!")
+            VStack {
+                Text("Text 1")
+                Text("Text 2")
+                HStack {
+                    Text("Text 3")
+                    Text("Text 4")
+                }
+            }
+            Text("Text 5")
         }
     }
 }
