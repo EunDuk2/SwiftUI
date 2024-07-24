@@ -8,46 +8,39 @@
 import SwiftUI
 import Combine
 
-class UserProfile: ObservableObject {
-    @Published var name: String = "eunsung"
-    @Published var age: Int = 25
-    @Published var agreeProvideInformation: Bool = false
-}
-
 struct ContentView: View {
-    @EnvironmentObject var userProfile: UserProfile
-    @State private var shouldShowing: Bool = true
+    
+    @EnvironmentObject var timerData: TimerData
     
     var body: some View {
-        VStack() {
-            TextField("Change Name", text: $userProfile.name)
-                .padding()
-                .border(.green, width: 2)
-            
-            TextField("Change Age", value: $userProfile.age, formatter: NumberFormatter())
-                .padding()
-                .border(.blue, width: 2)
-            
-            Button(action: {
-                shouldShowing = !shouldShowing
-            }, label: {
-                Text(shouldShowing ? "Hide Profile" : "Show Profile")
-            })
+        
+        NavigationView {
             
             VStack {
-                Text("name: \(userProfile.name)")
-                Text("name: \(userProfile.age)")
-                Toggle("provide user information", isOn: $userProfile.agreeProvideInformation)
+                Text("Timer count = \(timerData.timeCount)")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding()
+                Button(action: resetCount, label: {
+                    Text("Reset Count")
+                })
+                
+                NavigationLink(destination: SeconeView()) {
+                    Text("Next Screen")
+                }
+                .padding()
             }
-            .padding()
-            .opacity(shouldShowing ? 1 : 0)
         }
+    }
+    
+    func resetCount() {
+        timerData.resetCount()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(UserProfile())
+            .environmentObject(TimerData())
     }
 }

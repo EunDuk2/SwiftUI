@@ -12,7 +12,7 @@ struct SwiftUI_01App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(UserProfile())
+                .environmentObject(TimerData())
         }
     }
 }
