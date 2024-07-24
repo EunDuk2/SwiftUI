@@ -6,37 +6,23 @@
 //
 
 import SwiftUI
+import Combine
+
+class User: ObservableObject {
+    @Published var name: String = ""
+    @Published var age: Int = 0
+}
 
 struct ContentView: View {
     
-    @State private var wifiEnabled = true
-    @State private var userName = ""
+    @ObservedObject var user: User = User()
     
     var body: some View {
         VStack {
-            
-            TextField("Enter user name", text: $userName)
-            Text(userName)
-            
-            Toggle(isOn: $wifiEnabled, label: {
-                Text("Enable WiFi")
-            })
-            WifiImageView(wifiEnabled: $wifiEnabled)
-            
-//            Text(wifiEnabled ? "on" : "off")
-//            Image(systemName: wifiEnabled ? "wifi" : "wifi.slash")
-        }
-    }
-}
-
-struct WifiImageView: View {
-    
-    @Binding var wifiEnabled: Bool
-    
-    var body: some View {
-        VStack {
-            Text(wifiEnabled ? "on" : "off")
-            Image(systemName: wifiEnabled ? "wifi" : "wifi.slash")
+            TextField("name", text: $user.name)
+            Text(user.name)
+            TextField("age", value: $user.age, formatter: NumberFormatter())
+            Text("\(user.age)")
         }
     }
 }
