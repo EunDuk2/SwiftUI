@@ -25,22 +25,28 @@ struct ContentView: View {
     @State var toggleStatus = true
     
     var body: some View {
-        List {
-            
-            Section(header: Text("Settings")) {
-                Toggle(isOn: $toggleStatus, label: {
-                    Text("Allow Notifications")
-                })
-            }
-            Section(header: Text("To Do Tasks")) {
-                ForEach(listData) { item in
-                    HStack {
-                        Image(systemName: item.imageName)
-                        Text(item.task)
+        NavigationView {
+            List {
+                Section(header: Text("Settings")) {
+                    Toggle(isOn: $toggleStatus, label: {
+                        Text("Allow Notifications")
+                    })
+                }
+                Section(header: Text("To Do Tasks")) {
+                    ForEach(listData) { item in
+                        NavigationLink(destination: Text(item.task)) {
+                            HStack {
+                                Image(systemName: item.imageName)
+                                Text(item.task)
+                            }
+                        }
                     }
                 }
             }
-            
+            .navigationBarTitle(Text("To DO List"))
+            .navigationBarItems(trailing: Button(action: {}, label: {
+                Text("Add")
+            }))
         }
     }
 }
