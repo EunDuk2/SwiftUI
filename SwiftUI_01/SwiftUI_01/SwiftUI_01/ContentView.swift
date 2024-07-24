@@ -8,21 +8,39 @@
 import SwiftUI
 import Combine
 
-class User: ObservableObject {
-    @Published var name: String = ""
-    @Published var age: Int = 0
+class UserProfile: ObservableObject {
+    @Published var name: String = "eunsung"
+    @Published var age: Int = 25
+    @Published var agreeProvideInformation: Bool = false
 }
 
 struct ContentView: View {
-    
-    @ObservedObject var user: User = User()
+    @EnvironmentObject var userProfile: UserProfile
+    @State private var shouldShowing: Bool = true
     
     var body: some View {
-        VStack {
-            TextField("name", text: $user.name)
-            Text(user.name)
-            TextField("age", value: $user.age, formatter: NumberFormatter())
-            Text("\(user.age)")
+        VStack() {
+            TextField("Change Name", text: $userProfile.name)
+                .padding()
+                .border(.green, width: 2)
+            
+            TextField("Change Age", value: $userProfile.age, formatter: NumberFormatter())
+                .padding()
+                .border(.blue, width: 2)
+            
+            Button(action: {
+                shouldShowing = !shouldShowing
+            }, label: {
+                Text(shouldShowing ? "Hide Profile" : "Show Profile")
+            })
+            
+            VStack {
+                Text("name: \(userProfile.name)")
+                Text("name: \(userProfile.age)")
+                Toggle("provide user information", isOn: $userProfile.agreeProvideInformation)
+            }
+            .padding()
+            .opacity(shouldShowing ? 1 : 0)
         }
     }
 }
@@ -30,5 +48,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(UserProfile())
     }
 }
