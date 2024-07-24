@@ -41,13 +41,20 @@ struct ContentView: View {
                             }
                         }
                     }
+                    .onDelete(perform: deleteItem)
+                    .onMove(perform: moveItem)
                 }
             }
             .navigationBarTitle(Text("To DO List"))
-            .navigationBarItems(trailing: Button(action: {}, label: {
-                Text("Add")
-            }))
+            .navigationBarItems(trailing: EditButton())
         }
+    }
+    
+    func deleteItem(at offsets: IndexSet) {
+        print("offsets: \(offsets)")
+    }
+    func moveItem(from source: IndexSet, to destination: Int) {
+        print("source: \(source), destination: \(destination)")
     }
 }
 
