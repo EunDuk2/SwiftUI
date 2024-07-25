@@ -21,6 +21,7 @@
 		61586F902C50E56600119E8C /* carData.json in Resources */ = {isa = PBXBuildFile; fileRef = 61586F8F2C50E56600119E8C /* carData.json */; };
 		61586F922C50E86E00119E8C /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586F912C50E86E00119E8C /* CarDetail.swift */; };
 		61586F962C50EBA800119E8C /* AddNewCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586F952C50EBA800119E8C /* AddNewCar.swift */; };
+		61586F982C51F6B900119E8C /* TabViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586F972C51F6B900119E8C /* TabViewDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		61586F8F2C50E56600119E8C /* carData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = carData.json; path = "../../../../../Desktop/SwiftUI-master/CarData/carData.json"; sourceTree = "<group>"; };
 		61586F912C50E86E00119E8C /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
 		61586F952C50EBA800119E8C /* AddNewCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCar.swift; sourceTree = "<group>"; };
+		61586F972C51F6B900119E8C /* TabViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +80,14 @@
 				61586F952C50EBA800119E8C /* AddNewCar.swift */,
 				61586F832C50931D00119E8C /* SeconeView.swift */,
 				61586F812C50916500119E8C /* TimerData.swift */,
+				61586F8D2C50E39100119E8C /* CarStore.swift */,
+				61586F912C50E86E00119E8C /* CarDetail.swift */,
+				61586F972C51F6B900119E8C /* TabViewDemo.swift */,
 				61586F852C50E0A100119E8C /* CarAssets.xcassets */,
 				61586F8F2C50E56600119E8C /* carData.json */,
 				61586F892C50E11F00119E8C /* CarData */,
 				61129D332C4DEB3400FCABA2 /* Assets.xcassets */,
 				61129D352C4DEB3400FCABA2 /* Preview Content */,
-				61586F8D2C50E39100119E8C /* CarStore.swift */,
-				61586F912C50E86E00119E8C /* CarDetail.swift */,
 			);
 			path = SwiftUI_01;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				61586F8C2C50E1CC00119E8C /* CarData.swift in Sources */,
 				61586F922C50E86E00119E8C /* CarDetail.swift in Sources */,
 				61586F882C50E11700119E8C /* Car.swift in Sources */,
+				61586F982C51F6B900119E8C /* TabViewDemo.swift in Sources */,
 				61586F822C50916500119E8C /* TimerData.swift in Sources */,
 				61586F842C50931D00119E8C /* SeconeView.swift in Sources */,
 				61586F962C50EBA800119E8C /* AddNewCar.swift in Sources */,
