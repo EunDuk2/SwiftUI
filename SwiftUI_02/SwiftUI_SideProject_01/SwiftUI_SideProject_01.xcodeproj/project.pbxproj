@@ -11,6 +11,11 @@
 		61586FA82C52188200119E8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586FA72C52188200119E8C /* ContentView.swift */; };
 		61586FAA2C52188500119E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61586FA92C52188500119E8C /* Assets.xcassets */; };
 		61586FAD2C52188500119E8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61586FAC2C52188500119E8C /* Preview Assets.xcassets */; };
+		61586FB52C522D0800119E8C /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586FB42C522D0800119E8C /* ToDo.swift */; };
+		61586FB72C522DB500119E8C /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586FB62C522DB400119E8C /* ToDoList.swift */; };
+		61586FBA2C5242BA00119E8C /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586FB92C5242BA00119E8C /* AddToDo.swift */; };
+		61586FBC2C533BDB00119E8C /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586FBB2C533BDB00119E8C /* DateFormatterManager.swift */; };
+		61586FBE2C533D5200119E8C /* ToDoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586FBD2C533D5200119E8C /* ToDoDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		61586FA72C52188200119E8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		61586FA92C52188500119E8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61586FAC2C52188500119E8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		61586FB42C522D0800119E8C /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		61586FB62C522DB400119E8C /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		61586FB92C5242BA00119E8C /* AddToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDo.swift; sourceTree = "<group>"; };
+		61586FBB2C533BDB00119E8C /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
+		61586FBD2C533D5200119E8C /* ToDoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,9 @@
 		61586FA42C52188200119E8C /* SwiftUI_SideProject_01 */ = {
 			isa = PBXGroup;
 			children = (
+				61586FB82C52429900119E8C /* View */,
+				61586FB32C522CEA00119E8C /* Model */,
+				61586FBB2C533BDB00119E8C /* DateFormatterManager.swift */,
 				61586FA52C52188200119E8C /* SwiftUI_SideProject_01App.swift */,
 				61586FA72C52188200119E8C /* ContentView.swift */,
 				61586FA92C52188500119E8C /* Assets.xcassets */,
@@ -65,6 +78,24 @@
 				61586FAC2C52188500119E8C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		61586FB32C522CEA00119E8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61586FB42C522D0800119E8C /* ToDo.swift */,
+				61586FB62C522DB400119E8C /* ToDoList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61586FB82C52429900119E8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61586FB92C5242BA00119E8C /* AddToDo.swift */,
+				61586FBD2C533D5200119E8C /* ToDoDetail.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61586FB52C522D0800119E8C /* ToDo.swift in Sources */,
 				61586FA82C52188200119E8C /* ContentView.swift in Sources */,
 				61586FA62C52188200119E8C /* SwiftUI_SideProject_01App.swift in Sources */,
+				61586FBE2C533D5200119E8C /* ToDoDetail.swift in Sources */,
+				61586FB72C522DB500119E8C /* ToDoList.swift in Sources */,
+				61586FBC2C533BDB00119E8C /* DateFormatterManager.swift in Sources */,
+				61586FBA2C5242BA00119E8C /* AddToDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
