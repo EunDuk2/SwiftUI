@@ -16,8 +16,12 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationView {
-                List($toDoList.todo) { toDo in
-                    ToDoListCell(toDo: toDo)
+                List {
+                    ForEach($toDoList.todo) { toDo in
+                        ToDoListCell(toDo: toDo)
+                    }
+                    .onDelete(perform: deleteItems)
+                    .onMove(perform: moveItems)
                 }
                 .toolbar {
                     ToolbarItem(placement: .principal) {
@@ -43,6 +47,13 @@ struct ContentView: View {
                     Text("Calendar")
                 }
         }
+    }
+    
+    func deleteItems(at offets: IndexSet) {
+        toDoList.todo.remove(atOffsets: offets)
+    }
+    func moveItems(from source: IndexSet, to destination: Int) {
+        toDoList.todo.move(fromOffsets: source, toOffset: destination)
     }
 }
 
