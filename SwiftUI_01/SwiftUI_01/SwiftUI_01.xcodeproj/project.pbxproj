@@ -12,6 +12,7 @@
 		61129D342C4DEB3400FCABA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61129D332C4DEB3400FCABA2 /* Assets.xcassets */; };
 		61129D372C4DEB3400FCABA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61129D362C4DEB3400FCABA2 /* Preview Assets.xcassets */; };
 		61569F522C588D4F003F7917 /* UIViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61569F512C588D4F003F7917 /* UIViewDemo.swift */; };
+		61569F542C58AEC7003F7917 /* UITableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61569F532C58AEC7003F7917 /* UITableViewDemo.swift */; };
 		61586F822C50916500119E8C /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586F812C50916500119E8C /* TimerData.swift */; };
 		61586F842C50931D00119E8C /* SeconeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61586F832C50931D00119E8C /* SeconeView.swift */; };
 		61586F862C50E0A100119E8C /* CarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61586F852C50E0A100119E8C /* CarAssets.xcassets */; };
@@ -32,6 +33,7 @@
 		61129D332C4DEB3400FCABA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61129D362C4DEB3400FCABA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61569F512C588D4F003F7917 /* UIViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewDemo.swift; sourceTree = "<group>"; };
+		61569F532C58AEC7003F7917 /* UITableViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDemo.swift; sourceTree = "<group>"; };
 		61586F812C50916500119E8C /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
 		61586F832C50931D00119E8C /* SeconeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeconeView.swift; sourceTree = "<group>"; };
 		61586F852C50E0A100119E8C /* CarAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CarAssets.xcassets; path = "../../../../../Desktop/SwiftUI-master/CarAssets.xcassets"; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				61586F912C50E86E00119E8C /* CarDetail.swift */,
 				61586F972C51F6B900119E8C /* TabViewDemo.swift */,
 				61569F512C588D4F003F7917 /* UIViewDemo.swift */,
+				61569F532C58AEC7003F7917 /* UITableViewDemo.swift */,
 				61586F852C50E0A100119E8C /* CarAssets.xcassets */,
 				61586F8F2C50E56600119E8C /* carData.json */,
 				61586F892C50E11F00119E8C /* CarData */,
@@ -182,6 +185,7 @@
 				61586F8C2C50E1CC00119E8C /* CarData.swift in Sources */,
 				61586F922C50E86E00119E8C /* CarDetail.swift in Sources */,
 				61586F882C50E11700119E8C /* Car.swift in Sources */,
+				61569F542C58AEC7003F7917 /* UITableViewDemo.swift in Sources */,
 				61586F982C51F6B900119E8C /* TabViewDemo.swift in Sources */,
 				61586F822C50916500119E8C /* TimerData.swift in Sources */,
 				61586F842C50931D00119E8C /* SeconeView.swift in Sources */,
