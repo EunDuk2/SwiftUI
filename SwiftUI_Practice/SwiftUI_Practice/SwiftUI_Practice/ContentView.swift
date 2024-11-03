@@ -21,43 +21,20 @@ struct ContentView: View {
         // 레이블 -> 연산 결과: 100
         
         VStack {
-            HStack { // alignment는 아래 위를 조정
-                Spacer()
-                Text("첫 번째 수: ")
-                // TextField의 레이블은 플레이스 홀더, text는 문자열만 가능
-                TextField("숫자를 입력하세요", text: $num1)
-            }
-            HStack {
-                Spacer()
-                Text("두 번째 수: ")
-                TextField("숫자를 입력하세요", text: $num2)
-            }
+            // 뷰를 재사용
+            TextFieldView(label: "첫 번째 수: ", placeHolder: "숫자를 입력하세요", text: $num1)
+            TextFieldView(label: "두 번째 수: ", placeHolder: "숫자를 입력하세요", text: $num2)
             .padding(.bottom, 5)
             HStack {
                 Spacer()
-                Button(action: {
-                    add()
-                }, label: {
-                    Text("덧셈")
-                })
+                // 뷰를 재사용
+                ButtonView(label: "덧셈", caculator: add)
                 Spacer()
-                Button(action: {
-                    minus()
-                }, label: {
-                    Text("뺄셈")
-                })
+                ButtonView(label: "뺄셈", caculator: minus)
                 Spacer()
-                Button(action: {
-                    multiple()
-                }, label: {
-                    Text("곱셈")
-                })
+                ButtonView(label: "곱셈", caculator: multiple)
                 Spacer()
-                Button(action: {
-                    divid()
-                }, label: {
-                    Text("나눗셈")
-                })
+                ButtonView(label: "나눗셈", caculator: divide)
                 Spacer()
             }
             Text("결과: \(result)")
@@ -74,9 +51,40 @@ struct ContentView: View {
     func multiple() {
         result = Int(num1)! * Int(num2)!
     }
-    func divid() {
+    func divide() {
         result = Int(num1)! / Int(num2)!
     }
+}
+
+struct TextFieldView: View {
+    
+    var label: String
+    var placeHolder: String
+    
+    @Binding var text: String
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            Text(label)
+            TextField(placeHolder, text: $text)
+        }
+    }
+}
+
+struct ButtonView: View {
+    
+    var label: String
+    var caculator: () -> ()
+    
+    var body: some View {
+        Button(action: {
+            caculator()
+        }, label: {
+            Text(label)
+        })
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
