@@ -37,9 +37,13 @@ struct ContentView: View {
                 ButtonView(label: "나눗셈", caculator: divide)
                 Spacer()
             }
+            .background(.red)
             Text("결과: \(result)")
+                .background(.blue)
         }
         .padding()
+        .frame(width: 300)
+        .background(.green)
     }
     
     func add() {
@@ -69,6 +73,8 @@ struct TextFieldView: View {
             Text(label)
             TextField(placeHolder, text: $text)
         }
+        .padding()
+        .background(.yellow)
     }
 }
 
