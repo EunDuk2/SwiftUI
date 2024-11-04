@@ -9,54 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var num1: String = ""
-    @State var num2: String = ""
-    @State var result: Int = 0
+    @ObservedObject var viewModel: ViewModel = ViewModel()
     
     var body: some View {
         
-        // 레이블 -> 첫 번째 수: 텍스트필드 -> text field1
-        // 레이블 -> 두 번째 수: 텍스트필드 -> text field2
-        // 버튼 -> 덧셈 뺄셈 곱셈 나눗셈
-        // 레이블 -> 연산 결과: 100
-        
         VStack {
-            // 뷰를 재사용
-            TextFieldView(label: "첫 번째 수: ", placeHolder: "숫자를 입력하세요", text: $num1)
-            TextFieldView(label: "두 번째 수: ", placeHolder: "숫자를 입력하세요", text: $num2)
+            TextFieldView(label: "첫 번째 수: ", placeHolder: "숫자를 입력하세요", text: $viewModel.firstValue)
+            TextFieldView(label: "두 번째 수: ", placeHolder: "숫자를 입력하세요", text: $viewModel.secondValue)
             .padding(.bottom, 5)
             HStack {
                 Spacer()
-                // 뷰를 재사용
-                ButtonView(label: "덧셈", caculator: add)
+                ButtonView(label: "덧셈", caculator: viewModel.add)
                 Spacer()
-                ButtonView(label: "뺄셈", caculator: minus)
+                ButtonView(label: "뺄셈", caculator: viewModel.substract)
                 Spacer()
-                ButtonView(label: "곱셈", caculator: multiple)
+                ButtonView(label: "곱셈", caculator: viewModel.multiple)
                 Spacer()
-                ButtonView(label: "나눗셈", caculator: divide)
+                ButtonView(label: "나눗셈", caculator: viewModel.divide)
                 Spacer()
             }
             .background(.red)
-            Text("결과: \(result)")
+            Text("결과: \(viewModel.result)")
                 .background(.blue)
         }
         .padding()
         .frame(width: 300)
         .background(.green)
-    }
-    
-    func add() {
-        result = Int(num1)! + Int(num2)!
-    }
-    func minus() {
-        result = Int(num1)! - Int(num2)!
-    }
-    func multiple() {
-        result = Int(num1)! * Int(num2)!
-    }
-    func divide() {
-        result = Int(num1)! / Int(num2)!
     }
 }
 
