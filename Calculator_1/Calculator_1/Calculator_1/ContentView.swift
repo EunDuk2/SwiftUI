@@ -51,7 +51,7 @@ struct ContentView: View {
                         Button1(action: { viewModel.addNumber(num: "1") }, number: "1", backgroundColor: .spaceGray)
                         Button1(action: { viewModel.toggleOperator(operation: "+") }, number: "+", backgroundColor: .lightOrange, isOperating: viewModel.isOperators["+"] ?? false)
                     }
-                    HStack {
+                    HStack { 
                         Button1(action: { viewModel.addNumber(num: "0") }, number: "0", backgroundColor: .spaceGray, width: 144, alignment: .leading)
                         Button1(action: { }, number: ".", backgroundColor: .spaceGray)
                         Button1(action: { }, number: "=", backgroundColor: .lightOrange)
