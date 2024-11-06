@@ -12,6 +12,7 @@
 		61307BE52CD924C7002F0D64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61307BE42CD924C7002F0D64 /* Assets.xcassets */; };
 		61307BE82CD924C7002F0D64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61307BE72CD924C7002F0D64 /* Preview Assets.xcassets */; };
 		61307BEF2CDA7999002F0D64 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61307BEE2CDA7999002F0D64 /* ViewModel.swift */; };
+		61307BF12CDBC173002F0D64 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61307BF02CDBC173002F0D64 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		61307BE42CD924C7002F0D64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61307BE72CD924C7002F0D64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61307BEE2CDA7999002F0D64 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		61307BF02CDBC173002F0D64 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				61307BE02CD924C6002F0D64 /* Calculator_1App.swift */,
 				61307BE22CD924C6002F0D64 /* ContentView.swift */,
 				61307BEE2CDA7999002F0D64 /* ViewModel.swift */,
+				61307BF02CDBC173002F0D64 /* Calculator.swift */,
 				61307BE42CD924C7002F0D64 /* Assets.xcassets */,
 				61307BE62CD924C7002F0D64 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61307BE32CD924C6002F0D64 /* ContentView.swift in Sources */,
+				61307BF12CDBC173002F0D64 /* Calculator.swift in Sources */,
 				61307BEF2CDA7999002F0D64 /* ViewModel.swift in Sources */,
 				61307BE12CD924C6002F0D64 /* Calculator_1App.swift in Sources */,
 			);

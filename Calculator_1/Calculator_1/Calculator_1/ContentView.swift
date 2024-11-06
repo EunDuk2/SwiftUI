@@ -54,7 +54,7 @@ struct ContentView: View {
                     HStack { 
                         Button1(action: { viewModel.addNumber(num: "0") }, number: "0", backgroundColor: .spaceGray, width: 144, alignment: .leading)
                         Button1(action: { }, number: ".", backgroundColor: .spaceGray)
-                        Button1(action: { }, number: "=", backgroundColor: .lightOrange)
+                        Button1(action: { viewModel.caculateResult() }, number: "=", backgroundColor: .lightOrange)
                     }
                 }
                 Spacer()
