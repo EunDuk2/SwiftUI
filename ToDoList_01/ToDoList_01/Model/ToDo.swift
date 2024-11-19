@@ -7,13 +7,14 @@
 
 import Foundation
 
-class ToDo: Identifiable {
-    private let uuid: UUID = UUID()
+struct ToDo: Identifiable {
+    internal let id: UUID = UUID()
     private var content: String
     private var completion: Bool = false
     
-    init(content: String) {
+    init(content: String, completion: Bool = false) {
         self.content = content
+        self.completion = completion
     }
     
     func getContent() -> String {
@@ -23,11 +24,10 @@ class ToDo: Identifiable {
         return self.completion
     }
     
-    func updateContent(content: String) {
+    mutating func updateContent(content: String) {
         self.content = content
     }
-    func updateCompletion() {
+    mutating func updateCompletion() {
         self.completion.toggle()
-        print(self.completion)
     }
 }

@@ -8,34 +8,24 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-     private var toDoManager: ToDoManager
     
-    @Published private(set) var toDoList: [ToDo]
+    @Published var toDoList: [ToDo]
     
-    init(toDoManager: ToDoManager) {
-        self.toDoManager = toDoManager
-        self.toDoList = toDoManager.getToDoList()
+    init(toDoList: [ToDo]) {
+        self.toDoList = toDoList
     }
     
     func appendToDo(content: String) {
-        toDoManager.appendToDo(todo: ToDo(content: content))
-        updateToDoList()
+        self.toDoList.append(ToDo(content: content))
     }
     func removeToDo(index: IndexSet) {
-        toDoManager.removeToDo(index: index)
-        updateToDoList()
+        self.toDoList.remove(atOffsets: index)
     }
     func changeToDo(source: IndexSet, destination: Int) {
-        toDoManager.changeToDoIndex(source: source, destination: destination)
-        updateToDoList()
+        self.toDoList.move(fromOffsets: source, toOffset: destination)
     }
     func toggleToDoCompletion(index: Int) {
-        toDoManager.toggleCompletion(index: index)
-        updateToDoList()
-        print("completion: \(self.toDoList[0].getCompletion())")
+        self.toDoList[index].updateCompletion()
     }
     
-    func updateToDoList() {
-        self.toDoList = toDoManager.getToDoList()
-    }
 }

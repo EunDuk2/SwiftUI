@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct ToDoCellView: View {
-    var viewModel: ViewModel
     
-    var todo: ToDo
+    @Binding var todo: ToDo
     
     var body: some View {
         HStack {
             Button(action: {
-                self.viewModel.toggleToDoCompletion(index: 0)
+                todo.updateCompletion()
             }, label: {
-                Image(systemName: self.todo.getCompletion() ? "checkmark.circle.fill" : "checkmark.circle")
+                Image(systemName: todo.getCompletion() ? "checkmark.circle.fill" : "checkmark.circle")
                     .imageScale(.large)
             })
+            .buttonStyle(BorderlessButtonStyle())
+            .foregroundColor(.black)
             Text(self.todo.getContent())
         }
     }

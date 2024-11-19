@@ -9,16 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var viewModel: ViewModel = ViewModel(toDoManager: ToDoManager(ToDoList: [ToDo(content: "SwiftUI 공부")]))
+    @ObservedObject var viewModel: ViewModel = ViewModel(toDoList: [ToDo(content: "SwiftUI 공부")])
     
     @State private var isPresenting = false
     
     var body: some View {
         NavigationView {
             List {
-                
-                ForEach(viewModel.toDoList) { todo in
-                    ToDoCellView(viewModel: self.viewModel, todo: todo)
+                ForEach($viewModel.toDoList) { todo in
+                    ToDoCellView(todo: todo)
                 }
                 .onDelete(perform: deleteItems)
                 .onMove(perform: moveItems)
