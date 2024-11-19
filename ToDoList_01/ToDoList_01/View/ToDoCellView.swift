@@ -21,7 +21,10 @@ struct ToDoCellView: View {
             })
             .buttonStyle(BorderlessButtonStyle())
             .foregroundColor(.black)
-            Text(self.todo.getContent())
+            NavigationLink(destination: ToDoDetailView(todo: todo), label: {
+                Text(self.todo.getContent())
+            })
+            
         }
     }
 }
